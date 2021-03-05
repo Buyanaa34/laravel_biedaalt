@@ -1,0 +1,515 @@
+.stylish_label{ /*effect-tei label*/
+    transition: 0.5s !important;
+}
+
+html{
+    scroll-behavior: smooth !important;
+}
+
+#listz{ /*ul list*/
+    position: relative;
+    width: 90%;
+    margin: 50px auto 0;
+    padding:10px;
+    box-sizing: border-box;
+}
+
+
+#solo{/*li list*/
+    border-radius: 5%;
+    background-color: #b1b1b1;
+    padding:10px 20px;
+    margin:5px 0;
+    transition: .5s;
+}
+
+#solo:hover{
+    transform: scale(1.06);
+    background: #ff6961;
+}
+
+
+
+#bichleg{ /* home page deer bga video*/
+    position: absolute;
+    width: 57.7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.moving_word{/*home page deer slide hiij bga ug*/
+    text-align: left;
+    padding-top: 250px;
+    position: relative;
+    font-size: 50px;
+    animation-duration: 2s;
+    animation-fill-mode: forwards; 
+    animation-name: moveword;
+    font-style: italic;
+}
+
+@keyframes moveword { 
+    from {
+        padding-left: 1%;
+        color: rgba(255, 255, 255, 0); /* transparent-aas shar ungu bolgoh heseg*/
+    }
+    to {
+        padding-left: 26.3%;
+        color: #ff6961;
+    }
+}
+
+.nav-link { /*navbar-iin doroh bh contentuudiin heseg*/
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #ff6961 !important;
+}
+
+
+#navbar{
+    z-index: 5; /* navbar-iin link-uud ni busad contentiihoo arduur orohiiig ni boliolah css*/
+    position: fixed ;
+    width: 100%;
+    position: -webkit-sticky;
+    top:0; 
+    transition: 0.4s;
+    backdrop-filter: blur(2px);
+}
+
+footer {
+    clear: both;
+    position: relative;
+}
+
+
+
+.content1{/*apps dotor navbar-iin gaduurh huree home page deerh ued*/
+    position: relative;
+    min-height: 800px;
+}
+
+.content1nothome{/*apps dotor navbar-iin gaduurh huree home page-ees uur page deer bga ued*/
+    position: relative;
+    min-height:90px;
+}
+
+.content2{/* home, cars , comments edr-iin contentiig aguulah heseg*/
+    position: relative;
+}
+
+.gol-heseg{/* demii ymshig murtluu mdk bn yhw ene blhr home.blade.php dotor home-iin buh content-g aguulah div class*/
+    position: relative;
+    text-align: center  ;
+}
+
+
+
+/*section video{
+    position: relative;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}*/
+
+/*********************mashinii zurag************************/
+section .img_container{
+    position: absolute;
+    display: flex;
+    height: calc(100% - 850px);
+    width:calc(100% - 200px);
+    z-index:0.5;
+}
+
+section .img_container .boxx{
+    position: relative;
+    width:  25%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #ff6961;
+    
+}
+
+section .img_container .boxx:last-child{
+    border-right: none;
+}
+
+section .img_container .boxx .imgBx{
+    position: absolute;
+    top: 0;
+    left:0;
+    width:100%;
+    height: 100%;
+    transition: 0.5s;
+    opacity: 0.5;
+    filter: grayscale(1);
+}
+
+section .img_container .boxx .imgBx:hover{
+    opacity: 1;
+    filter: grayscale(0);
+}
+
+section .img_container .boxx .imgBx:active{
+    position: fixed;
+    top: 50px;
+    left: 0px;
+    height: calc(100% - 100px);
+    z-index:2;
+    opacity:1;
+    filter: grayscale(0);
+}
+
+section .img_container .boxx .imgBx img{
+    position: absolute;
+    top: 0;
+    left:0;
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.galleryz{
+    animation-duration: 4.5s;
+    animation-fill-mode: forwards; 
+    animation-name: showimage;
+}
+
+@keyframes showimage { 
+    from {
+        height: 35%;
+        opacity: 0;
+    }
+    to {
+        height: 100%;
+        opacity:1;
+    }
+}
+
+.nothing{
+    animation-duration: 4.5s;
+    animation-fill-mode: forwards; 
+    animation-name: showimagez;
+}
+
+@keyframes showimagez { 
+    from {
+        height: 100%;
+        opacity:1;
+    }
+    to {
+        height: 0%;
+        opacity: 0;
+    }
+}
+/*********************mashinii zurag************************/
+
+
+/**********************mashinuudiin_post*********************/
+
+.grid_shit{
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    justify-content: center;
+    align-items: center;
+}
+
+
+.containerm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    padding: 40px 0;
+    height: 450px;
+}
+.containerm .cardm {
+
+    position:absolute;
+    width: 320px;
+    height: 440px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+                inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+                5px 5px 5px rgba(0, 0, 0, 0.05),
+                -5px -5px 5px rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    margin: 30px;
+
+}
+
+.containerm .cardm .boxm {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: #ebf5fc;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.containerm .cardm:hover .boxm {
+    transform: translateY(-50px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    background: rgb(148, 148, 148);
+} 
+
+
+.containerm .cardm .boxm .contentm {
+    padding:20px;
+    text-align: center;
+}
+
+.containerm .cardm .boxm .contentm h3{
+    font-size: 1.6em;
+    color: #777;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.containerm .cardm .boxm .contentm small{
+    font-weight: 300;
+    color:#777;
+    z-index: 1;
+    transition: 0.5;
+}
+
+.containerm .cardm .boxm .contentm a{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background: tomato;
+    margin-top:15px;
+    border-radius: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    box-shadow: 0 10px 20px rbga(0, 0, 0, 0.2);
+    transition: 0.5s;
+}
+
+.containerm .cardm:hover .boxm .contentm a{
+    background: royalblue;
+}
+
+.checked {
+    color: tomato;
+  }
+
+.star_uud span:hover{
+    color: chocolate;
+}
+/**********************mashinuudiin_post*********************/
+
+/**********************Stylish textbox***********************/
+
+
+
+/**********************animated  background***********************/
+.box-areaz{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+.box-areaz li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 25px;
+    height: 25px;
+    background: rgba(238, 80, 80, 0.897);
+    animation: animate 20s linear infinite;
+    bottom: -150px;
+}
+.box-areaz li:nth-child(1){
+    left: 86%;
+    width:80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+.box-areaz li:nth-child(2){
+    left: 12%;
+    width:30px;
+    height: 30px;
+    animation-delay: 1.5s;
+    animation-duration: 10s;
+}
+.box-areaz li:nth-child(3){
+    left: 70%;
+    width:100px;
+    height: 100px;
+    animation-delay: 5.5s;
+}
+.box-areaz li:nth-child(4){
+    left: 70%;
+    width:150px;
+    height: 150px;
+    animation-delay: 15s;
+}
+.box-areaz li:nth-child(5){
+    left: 65%;
+    width:40px;
+    height: 40px;
+    animation-delay: 0s;
+}
+.box-areaz li:nth-child(6){
+    left: 15%;
+    width:110px;
+    height: 110px;
+    animation-delay: 3.5s;
+}
+@keyframes animate{
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity:1;
+    }
+    100%{
+        transform: translateY(-800px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+/********************** animated background ********************************/
+
+
+/* *********************************crew_pics******************************* */
+
+.sectiono{
+    position: relative;
+}
+
+.sectiono::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    background: #ff6961;
+    clip-path: circle(30% at right 70%);
+}
+
+.sectiono::after{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    background: #ffa6a2;
+    clip-path: circle(20% at 10% 10%);
+}
+
+.containero{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.containero .cardo{
+    position: relative;
+    width:300px;
+    height:400px;
+    background-color: rgba(235, 80, 80, 0.05);
+    margin: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+.containero .cardo .contento{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.containero .cardo:hover .contento{
+    opacity: 1;
+    transform: translateY(-20px);
+
+}
+
+.containero .cardo .contento .imgbxo{
+    position: relative;
+    width:150px;
+    height:150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid rgba(0, 0, 0,0.25);
+}
+
+.containero .cardo .contento .imgbxo img{
+    position :absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.containero .cardo .contento .contentbxo h3{
+    color: rgb(116, 116, 116);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    margin: 20px 0 10px;
+    line-height: 1.1em;
+}
+
+.containero .cardo .contento .contentbxo span{
+    font-size: 17px;
+    font-weight: 300px;
+    text-transform: initial;
+}
+
+.containero .cardo .scio{
+    position: absolute;
+    bottom: 50px;
+    display: flex ;
+    padding-left: 0px !important;
+}
+.containero .cardo .scio li{
+    list-style: none;
+    margin: 0 10px;
+    transform: translateY(40px);
+    transition: 0.5s;
+    opacity: 0;
+    transition-delay: calc(0.1s * var (--i));
+}
+
+.containero .cardo:hover .scio li{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.containero .cardo .scio li a{
+    color:#ff6961;
+    font-size: 24px;
+}
+
+/* *********************************crew_pics******************************* */

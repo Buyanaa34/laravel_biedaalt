@@ -1,0 +1,48 @@
+body{
+    background-color: gray;
+    position: relative;
+}
+
+.content1{
+    position: relative;
+}
+
+.box {
+    background: #CCC;
+    text-align: left;
+    position: relative;
+    height: 200px;
+    width: 200px;
+    animation-duration: 3s;
+    animation-fill-mode: forwards; 
+    animation-name: changeShadow;
+}
+@keyframes changeShadow {
+    from {
+        padding-left: 5px;
+    }
+    to {
+        padding-left: 100px;
+    }
+}
+
+.type1{
+    color: grey;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: rgba(255, 105, 180, 0.274);
+}
+.type12{
+    position: static;
+    background-color: green;
+}
+
+.type2{
+    position: static;
+    background-color: green;
+}
+
+.content2{
+    position: static;
+}
